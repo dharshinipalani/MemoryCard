@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Memory Card Game</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <h2>MEMORY CARD </h2>
+        <p class="instructions">INSTRUCTIONS:
+            <br>
+            Gameplay:
+            <br>
+            player start by flipping over any two cards in the grid.
+            If the two cards match (same picture) then it will not flip back.
+            If the two cards do not match, it will flip them back face down.
+            <br>            
+            Remember:
+            <br>
+            Pay close attention to the cards that have been revealed and their positions on the grid.
+            Try to memorize the locations of the cards to increase your chances of finding matching pairs.
+            <br>
+            Winning the Game:
+            <br>
+            The game continues until all the cards have been matched into pairs.
+        </p>
+        <div class="container">
+            <ul class="cards">
+                <li class="card index">
+                    <div class="view front">
+                       <span class="material-icons">?</span>
+                    </div>
+                    <div class="view back">
+                        <img src="images/img-1.jpg" alt="bee">
+                    </div>
+                </li>
+                <li class="card index">
+                    <div class="view front">
+                        <span class="material-icons">?</span>
+                    </div>
+                    <div class="view back">
+                        <img src="images/img-2.jpg" alt="umberlla" >
+                    </div>
+                </li>
+                <li class="card index">
+                    <div class="view front">
+                        <span class="material-icons">?</span>
+                    </div>
+                    <div class="view back">
+                        <img src="images/img-3.jpg" alt="pot">
+                    </div>
+                </li>
+                <li class="card index ">
+                    <div class="view front">
+                        <span class="material-icons">?</span>
+                    </div>
+                    <div class="view back">
+                        <img src="images/img-4.jpg" alt="bottle">
+                    </div>
+                </li>
+                <li class="card index">
+                    <div class="view front">
+                        <span class="material-icons">?</span>
+                    </div>
+                    <div class="view back">
+                        <img src="images/img-4.jpg" alt="bottle">
+                    </div>
+                </li>
+                <li class="card index">
+                    <div class="view front">
+                        <span class="material-icons">?</span>
+                    </div>
+                    <div class="view back">
+                        <img src="images/img-5.jpg" alt="jam">
+                    </div>
+                </li>
+                <li class="card index">
+                    <div class="view front">
+                        <span class="material-icons">?</span>
+                    </div>
+                    <div class="view back">
+                        <img src="images/img-6.jpg" alt="water">
+                    </div>
+                </li>
+                <li class="card index">
+                    <div class="view front">
+                        <span class="material-icons">?</span>
+                    </div>
+                    <div class="view back">
+                        <img src="images/img-7.jpg" alt="home">
+                    </div>
+                </li>
+                <li class="card index">
+                    <div class="view front">
+                        <span class="material-icons">?</span>
+                    </div>
+                    <div class="view back">
+                        <img src="images/img-8.jpg" alt="shoe">
+                    </div>
+                </li>
+                <li class="card index">
+                    <div class="view front">
+                        <span class="material-icons">?</span>
+                    </div>
+                    <div class="view back">
+                        <img src="images/img-7.jpg" alt="home">
+                    </div>
+                </li>
+                <li class="card index">
+                    <div class="view front">
+                        <span class="material-icons">?</span>
+                    </div>
+                    <div class="view back">
+                        <img src="images/img-2.jpg" alt="umberlla">
+                    </div>
+                </li>
+                <li class="card index">
+                    <div class="view front">
+                        <span class="material-icons">?</span>
+                    </div>
+                    <div class="view back">
+                        <img src="images/img-5.jpg" alt="jam">
+                    </div>
+                </li>
+                <li class="card index">
+                    <div class="view front">
+                        <span class="material-icons">?</span>
+                    </div>
+                    <div class="view back">
+                        <img src="images/img-8.jpg" alt="shoe">
+                    </div>
+            </li>
+            <li class="card index">
+                <div class="view front">
+                    <span class="material-icons">?</span>
+                </div>
+                <div class="view back">
+                    <img src="images/img-3.jpg" alt="pot">
+                </div>
+            </li>
+            <li class="card index">
+                <div class="view front">
+                    <span class="material-icons">?</span>
+                </div>
+                <div class="view back">
+                    <img src="images/img-6.jpg" alt="water">
+                </div>
+            </li>
+            <li class="card index">
+                <div class="view front">
+                    <span class="material-icons">?</span>
+                </div>
+                <div class="view back">
+                    <img src="images/img-1.jpg" alt="bee">
+                </div>
+            </li>
+
+
+            </ul>
+
+        </div>
+        
+           
+        <div class="message">
+            <h2>HURRAY,
+                <br>YOU WON!!</h2>
+            <button onclick="restartGame()">Play Again?</button>
+        </div>
+        <script src="game.js"></script>
+    </body>
+</html>

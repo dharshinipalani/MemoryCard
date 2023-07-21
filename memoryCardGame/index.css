@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+h2{
+    font-size: 30px;
+    font-family: 'Lucida Sans';
+    font-style: italic;
+    margin-top: -500px;
+    margin-left: 200px;
+    color: rgb(46, 47, 124);
+}
+p.instructions{
+    height: 400px;
+    width: 400px;
+    margin-left: -800px;
+    margin-right: 100px;
+    font-family: 'Lucida Sans';
+    font-size: 20px;
+    color: rgb(9, 9, 138);
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: rgb(170, 220, 226) ;
+}
+.container{
+    height: 400px;
+    width: 400px;
+    padding: 20px;
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+.cards, .card, .view{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.cards{
+    height:100%;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.cards .card{
+    cursor: pointer;
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    height:calc(100% / 4 - 10px);
+    width:calc(100% / 4 - 10px);
+}
+.card.shake{
+    animation: shake 0.25s ease-in-out;
+}
+@keyframes shake {
+    0%,100%{
+        transform: translateX(0);
+    }
+    20%{
+        transform: translateX(-13px);
+    }
+    40%{
+        transform: translateX(13px);
+    }
+    60%{
+        transform: translateX(-8px);
+    }
+    80%{
+        transform: translateX(8px);
+    }
+    
+}
+.cards .card .view{
+    height: 100%;
+    width: 100%;
+    user-select: none;
+    pointer-events: none;
+    position: absolute;
+    background-color: white;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    transition: transform 0.25s linear;
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
+}
+
+.card .front span{
+    font-size: 50px;
+    font-weight: 600;
+    color: rgb(72, 195, 226);
+}
+.card .back {
+    transform: rotateY(-180deg);
+}
+.card.flip .front  {
+    transform: rotateY(180deg);
+}
+.card.flip .back {
+    transform: rotateY(0);
+}
+.card .back img{
+    max-width: 45px;
+}
+/* Add this CSS to hide the message initially */
+.message {
+    display:none ;
+    width: 250px;
+    height: 250px;
+    position: fixed;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(163, 221, 228);
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+}
+
+.message h2 {
+    font-size: 24px;
+    font-family:'Lucida Sans';
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.message button {
+    background-color: rgb(41, 103, 109);
+    color: white;
+    border: none;
+    font-family: 'Lucida Sans'; 
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.message.show{
+    display: block;
+}
